@@ -12,34 +12,18 @@
 ---
 
 ### 🖼️ **System Screenshots**
-<!-- Replace these placeholder paths with your actual screenshot file paths -->
 
-![Admin Dashboard](./assets/Adash.png)
-*Administrator Dashboard - Real-time metrics and operational insights*
+<div align="center">
 
-![Dark Theme Interface](./assets/black.png)
-*Dark Burgundy Theme - Modern night-shift friendly interface*
+<!-- Interactive Slideshow -->
+<details open>
+<summary><strong>📸 Interactive Screenshot Gallery</strong></summary>
 
-![Secure Login Page](./assets/Login.png)
-*Secure Authentication Portal with Role-based Access*
+[View Interactive Slideshow](https://Najaf-Ali-Imran.github.io/DATABASE-PROJECT-MANAGEMENT-SYSTEM/slideshow.html)
 
-![Urdu Language Interface](./assets/urdu.png)
-*Urdu Language Support - Seamless bilingual functionality*
+*Or browse individual screenshots below:*
 
-![Inventory Management](./assets/Inventory.png)
-*Comprehensive Inventory Management with Real-time Tracking*
-
-![Inventory Usage Analytics](./assets/usage.png)
-*Advanced Usage Analytics with Cost Tracking and Reports*
-
-![Feedback Management](./assets/Feedback.png)
-*Integrated Feedback and Issue Management System*
-
-![Lab Technician Dashboard](./assets/ldash.png)
-*Lab Technician Portal - Streamlined workflow management*
-
-![PDF Report Sample](./assets/reportgen.png)
-*Professional PDF Report Generation - Automated and Template-based*
+</details>
 
 </div>
 
