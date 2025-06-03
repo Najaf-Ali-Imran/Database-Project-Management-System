@@ -104,50 +104,75 @@ This is a sophisticated, desktop-based Laboratory Information Management System 
 ```mermaid
 graph TD
     %% Core UI and Application Services
-    UserInterface[WPF UI Layer (XAML Pages & Windows)] --> CSharpLogic["C# Code-Behind & Services\n(Business Logic, Data Validation, UI Event Handling)"]
-    CSharpLogic --> DataAccess["Data Access Logic (MySql.Data)"]
-    DataAccess --> MySQL_DB[(MySQL Database)]
+    UI[WPF UI Layer] --> CSL[C# Code-Behind & Services]
+    CSL --> DAL[Data Access Logic]
+    DAL --> DB[(MySQL Database)]
+
+    %% Node Text Definitions (for more complex labels)
+    subgraph " " %% Invisible subgraph to group text definitions
+      direction LR %% Optional, just for layout of these definitions if they were visible
+      style UI         text:"WPF UI Layer (XAML Pages & Windows)"
+      style CSL        text:"C# Code-Behind & Services<br/>(Business Logic, Data Validation, UI Event Handling)"
+      style DAL        text:"Data Access Logic (MySql.Data)"
+      
+      style Auth       text:"Authentication & Authorization<br/>(LoginWindow, Role Checks)"
+      style Locale     text:"Localization Engine<br/>(LanguageHelper, StringResources)"
+      style Theme      text:"Theme Manager<br/>(App.xaml.cs, Theme Files)"
+      style Notify     text:"Toast Notifications & Dialogs"
+
+      style Reporter   text:"Report Generation Logic<br/>(QuestPDF, EPPlus)"
+      style InvMgr     text:"Inventory Management Logic<br/>(Quantity Updates, Usage Logging)"
+      style UserProfile text:"User Profile & Settings Management"
+      style TaskMgr    text:"Task Management Logic<br/>(Admin Dashboard)"
+      style FeedbackMgr text:"Feedback & Issue Logic<br/>(Optional Google Sheets Sync)"
+
+      style PDF        text:"PDF Reports"
+      style Excel      text:"Excel Reports"
+      style CSV        text:"CSV Reports"
+      style GSheets    text:"Google Sheets API"
+    end
+
 
     %% Cross-Cutting Concerns / Shared Services
-    UserInterface --> AuthNAuthZ["Authentication & Authorization\n(LoginWindow, Role Checks)"]
-    UserInterface --> Localization["Localization Engine\n(LanguageHelper, StringResources)"]
-    UserInterface --> Theming["Theme Manager\n(App.xaml.cs, Theme Files)"]
-    UserInterface --> ToastNotif["Toast Notifications & Dialogs"]
+    UI --> Auth
+    UI --> Locale
+    UI --> Theme
+    UI --> Notify
     
-    %% Specific Functionality Modules (handled within CSharpLogic)
-    CSharpLogic --> ReportGeneration["Report Generation Logic\n(QuestPDF, EPPlus)"]
-    CSharpLogic --> InventoryMgmt["Inventory Management Logic\n(Quantity Updates, Usage Logging)"]
-    CSharpLogic --> UserProfileMgmt["User Profile & Settings Management"]
-    CSharpLogic --> TaskMgmt["Task Management Logic (Admin Dashboard)"]
-    CSharpLogic --> FeedbackIssueMgmt["Feedback & Issue Logic\n(Optional Google Sheets Sync)"]
+    %% Specific Functionality Modules (handled within CSL)
+    CSL --> Reporter
+    CSL --> InvMgr
+    CSL --> UserProfile
+    CSL --> TaskMgr
+    CSL --> FeedbackMgr
     
     %% External Dependencies / Outputs
-    ReportGeneration --> PDFOutput[/PDF Reports/]
-    ReportGeneration --> ExcelOutput[/Excel Reports/]
-    ReportGeneration --> CSVOutput[/CSV Reports/]
-    FeedbackIssueMgmt ----> OptionalGoogleSheetsAPI{{Google Sheets API}}
+    Reporter --> PDF[/PDF/]
+    Reporter --> Excel[/Excel/]
+    Reporter --> CSV[/CSV/]
+    FeedbackMgr ----> GSheets{{GSheets}}
 
-    %% Styling for readability
-    style UserInterface fill:#85C1E9,stroke:#3498DB,color:#000
-    style CSharpLogic fill:#AED6F1,stroke:#5DADE2,color:#000
-    style DataAccess fill:#D6EAF8,stroke:#85C1E9,color:#000
-    style MySQL_DB fill:#F1948A,stroke:#E74C3C,color:#fff
+    %% Styling for readability (using node IDs)
+    style UI fill:#85C1E9,stroke:#3498DB,color:#000
+    style CSL fill:#AED6F1,stroke:#5DADE2,color:#000
+    style DAL fill:#D6EAF8,stroke:#85C1E9,color:#000
+    style DB fill:#F1948A,stroke:#E74C3C,color:#fff
 
-    style AuthNAuthZ fill:#F9E79F,stroke:#F39C12,color:#000
-    style Localization fill:#F9E79F,stroke:#F39C12,color:#000
-    style Theming fill:#F9E79F,stroke:#F39C12,color:#000
-    style ToastNotif fill:#F9E79F,stroke:#F39C12,color:#000
+    style Auth fill:#F9E79F,stroke:#F39C12,color:#000
+    style Locale fill:#F9E79F,stroke:#F39C12,color:#000
+    style Theme fill:#F9E79F,stroke:#F39C12,color:#000
+    style Notify fill:#F9E79F,stroke:#F39C12,color:#000
 
-    style ReportGeneration fill:#A9DFBF,stroke:#58D68D,color:#000
-    style InventoryMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
-    style UserProfileMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
-    style TaskMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
-    style FeedbackIssueMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
+    style Reporter fill:#A9DFBF,stroke:#58D68D,color:#000
+    style InvMgr fill:#A9DFBF,stroke:#58D68D,color:#000
+    style UserProfile fill:#A9DFBF,stroke:#58D68D,color:#000
+    style TaskMgr fill:#A9DFBF,stroke:#58D68D,color:#000
+    style FeedbackMgr fill:#A9DFBF,stroke:#58D68D,color:#000
     
-    style PDFOutput fill:#D2B4DE,stroke:#8E44AD,color:#000
-    style ExcelOutput fill:#D2B4DE,stroke:#8E44AD,color:#000
-    style CSVOutput fill:#D2B4DE,stroke:#8E44AD,color:#000
-    style OptionalGoogleSheetsAPI fill:#FAD7A0,stroke:#F39C12,color:#000,stroke-dasharray: 5 5
+    style PDF fill:#D2B4DE,stroke:#8E44AD,color:#000
+    style Excel fill:#D2B4DE,stroke:#8E44AD,color:#000
+    style CSV fill:#D2B4DE,stroke:#8E44AD,color:#000
+    style GSheets fill:#FAD7A0,stroke:#F39C12,color:#000,stroke-dasharray: 5 5
 ```
 
 ---
