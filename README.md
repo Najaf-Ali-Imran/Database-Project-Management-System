@@ -12,34 +12,155 @@
 ---
 
 ### 🖼️ **System Screenshots**
-<!-- Replace these placeholder paths with your actual screenshot file paths -->
 
+<details open>
+<summary><strong>📸 Interactive Screenshot Gallery - Click to Navigate</strong></summary>
+
+<div align="center">
+
+<!-- Slideshow Navigation -->
+**Navigate Screenshots:** 
+[🏠 Dashboard](#admin-dashboard) | 
+[🌙 Dark Theme](#dark-theme) | 
+[🔐 Login](#login-page) | 
+[🌍 Urdu Interface](#urdu-interface) | 
+[📦 Inventory](#inventory-management) | 
+[📊 Analytics](#usage-analytics) | 
+[💬 Feedback](#feedback-system) | 
+[🧪 Lab Portal](#lab-technician) | 
+[📄 Reports](#pdf-reports)
+
+---
+
+#### <a id="admin-dashboard"></a>🏠 **Administrator Dashboard**
 ![Admin Dashboard](./assets/Adash.png)
-*Administrator Dashboard - Real-time metrics and operational insights*
+*Real-time metrics and operational insights for comprehensive system oversight*
 
+**Features Highlighted:**
+- Live performance metrics
+- Task management interface  
+- Real-time notifications
+- Operational status overview
+
+[⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Dark Theme](#dark-theme)
+
+---
+
+#### <a id="dark-theme"></a>🌙 **Dark Burgundy Theme**
 ![Dark Theme Interface](./assets/black.png)
-*Dark Burgundy Theme - Modern night-shift friendly interface*
+*Modern night-shift friendly interface with professional dark burgundy styling*
 
+**Features Highlighted:**
+- Eye-strain reduction for extended use
+- Professional color scheme
+- Consistent dark theme across all modules
+- Enhanced readability in low-light environments
+
+[⬅️ Previous: Dashboard](#admin-dashboard) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Login Page](#login-page)
+
+---
+
+#### <a id="login-page"></a>🔐 **Secure Authentication Portal**
 ![Secure Login Page](./assets/Login.png)
-*Secure Authentication Portal with Role-based Access*
+*Role-based secure authentication with modern security protocols*
 
+**Features Highlighted:**
+- BCrypt password encryption
+- Role-based access control
+- Remember me functionality
+- Secure session management
+
+[⬅️ Previous: Dark Theme](#dark-theme) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Urdu Interface](#urdu-interface)
+
+---
+
+#### <a id="urdu-interface"></a>🌍 **Urdu Language Interface**
 ![Urdu Language Interface](./assets/urdu.png)
-*Urdu Language Support - Seamless bilingual functionality*
+*Seamless bilingual functionality with complete Urdu language support*
 
+**Features Highlighted:**
+- Right-to-left (RTL) text support
+- Complete interface translation
+- Cultural date/number formatting
+- Dynamic language switching
+
+[⬅️ Previous: Login Page](#login-page) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Inventory](#inventory-management)
+
+---
+
+#### <a id="inventory-management"></a>📦 **Comprehensive Inventory Management**
 ![Inventory Management](./assets/Inventory.png)
-*Comprehensive Inventory Management with Real-time Tracking*
+*Advanced inventory tracking with real-time monitoring and management*
 
+**Features Highlighted:**
+- Real-time stock tracking
+- Supplier management
+- Expiry date monitoring
+- Cost analysis integration
+
+[⬅️ Previous: Urdu Interface](#urdu-interface) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Usage Analytics](#usage-analytics)
+
+---
+
+#### <a id="usage-analytics"></a>📊 **Advanced Usage Analytics**
 ![Inventory Usage Analytics](./assets/usage.png)
-*Advanced Usage Analytics with Cost Tracking and Reports*
+*Detailed analytics with cost tracking and comprehensive reporting*
 
+**Features Highlighted:**
+- Usage trend analysis
+- Cost optimization insights
+- Resource utilization metrics
+- Predictive analytics
+
+[⬅️ Previous: Inventory](#inventory-management) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Feedback System](#feedback-system)
+
+---
+
+#### <a id="feedback-system"></a>💬 **Integrated Feedback Management**
 ![Feedback Management](./assets/Feedback.png)
-*Integrated Feedback and Issue Management System*
+*Comprehensive feedback and issue management with Google Sheets integration*
 
+**Features Highlighted:**
+- Issue tracking and resolution
+- Google Sheets synchronization
+- Feedback categorization
+- Status tracking workflow
+
+[⬅️ Previous: Usage Analytics](#usage-analytics) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: Lab Technician](#lab-technician)
+
+---
+
+#### <a id="lab-technician"></a>🧪 **Lab Technician Portal**
 ![Lab Technician Dashboard](./assets/ldash.png)
-*Lab Technician Portal - Streamlined workflow management*
+*Streamlined workflow management for laboratory operations*
 
+**Features Highlighted:**
+- Sample management interface
+- Test result entry system
+- Inventory integration
+- Workflow optimization
+
+[⬅️ Previous: Feedback System](#feedback-system) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [➡️ Next: PDF Reports](#pdf-reports)
+
+---
+
+#### <a id="pdf-reports"></a>📄 **Professional PDF Report Generation**
 ![PDF Report Sample](./assets/reportgen.png)
-*Professional PDF Report Generation - Automated and Template-based*
+*Automated template-based reporting with professional formatting*
+
+**Features Highlighted:**
+- Customizable report templates
+- Professional formatting
+- Organization branding
+- Multiple export formats
+
+[⬅️ Previous: Lab Technician](#lab-technician) | [⬆️ Back to Navigation](#interactive-screenshot-gallery---click-to-navigate) | [🏠 Back to Dashboard](#admin-dashboard)
+
+---
+
+</div>
+
+</details>
 
 </div>
 
@@ -56,7 +177,6 @@
 - [🔒 Security & Compliance](#-security--compliance)
 - [🌐 Internationalization](#-internationalization)
 - [📈 Reporting & Analytics](#-reporting--analytics)
-
 
 ---
 
@@ -392,17 +512,13 @@ graph TB
 
 ---
 
+<div align="center">
 
 **Built with ❤️ for the Al-Qaim Foundation**
 
 *Empowering healthcare through intelligent laboratory management*
 
-</div>
-
 ---
----
-
-<div align="center">
 
 **⭐ Star this repository if you find it useful!**
 
