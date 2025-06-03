@@ -17,11 +17,10 @@
 
 <!-- Interactive Slideshow -->
 <details open>
-<summary><strong>📸 Interactive Screenshot Gallery</strong></summary>
+<summary><strong>📸 Screenshot Gallery</strong></summary>
 
-[View Interactive Slideshow](https://Najaf-Ali-Imran.github.io/DATABASE-PROJECT-MANAGEMENT-SYSTEM/slideshow.html)
+[View](https://Najaf-Ali-Imran.github.io/Database-Project-Management-System)
 
-*Or browse individual screenshots below:*
 
 </details>
 
