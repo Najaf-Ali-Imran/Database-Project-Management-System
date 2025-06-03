@@ -420,7 +420,7 @@ graph TD
 ---
 
 
-**Built with ❤️ for the Al-Qaim Foundati**
+**Built with ❤️ for the Al-Qaim Foundatio**
 
 *Empowering healthcare through intelligent laboratory management*
 
