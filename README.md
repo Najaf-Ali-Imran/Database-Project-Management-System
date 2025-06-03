@@ -104,55 +104,30 @@ This is a sophisticated, desktop-based Laboratory Information Management System 
 ```mermaid
 graph TD
     %% Core UI and Application Services
-    UI[WPF UI Layer] --> CSL[C# Code-Behind & Services]
-    CSL --> DAL[Data Access Logic]
-    DAL --> DB[(MySQL Database)]
-
-    %% Node Text Definitions (for more complex labels)
-    subgraph " " %% Invisible subgraph to group text definitions
-      direction LR %% Optional, just for layout of these definitions if they were visible
-      style UI         text:"WPF UI Layer (XAML Pages & Windows)"
-      style CSL        text:"C# Code-Behind & Services<br/>(Business Logic, Data Validation, UI Event Handling)"
-      style DAL        text:"Data Access Logic (MySql.Data)"
-      
-      style Auth       text:"Authentication & Authorization<br/>(LoginWindow, Role Checks)"
-      style Locale     text:"Localization Engine<br/>(LanguageHelper, StringResources)"
-      style Theme      text:"Theme Manager<br/>(App.xaml.cs, Theme Files)"
-      style Notify     text:"Toast Notifications & Dialogs"
-
-      style Reporter   text:"Report Generation Logic<br/>(QuestPDF, EPPlus)"
-      style InvMgr     text:"Inventory Management Logic<br/>(Quantity Updates, Usage Logging)"
-      style UserProfile text:"User Profile & Settings Management"
-      style TaskMgr    text:"Task Management Logic<br/>(Admin Dashboard)"
-      style FeedbackMgr text:"Feedback & Issue Logic<br/>(Optional Google Sheets Sync)"
-
-      style PDF        text:"PDF Reports"
-      style Excel      text:"Excel Reports"
-      style CSV        text:"CSV Reports"
-      style GSheets    text:"Google Sheets API"
-    end
-
+    UI["WPF UI Layer (XAML Pages & Windows)"] --> CSL["C# Code-Behind & Services<br/>(Business Logic, Data Validation, UI Event Handling)"]
+    CSL --> DAL["Data Access Logic (MySql.Data)"]
+    DAL --> DB[("MySQL Database")]
 
     %% Cross-Cutting Concerns / Shared Services
-    UI --> Auth
-    UI --> Locale
-    UI --> Theme
-    UI --> Notify
+    UI --> Auth["Authentication & Authorization<br/>(LoginWindow, Role Checks)"]
+    UI --> Locale["Localization Engine<br/>(LanguageHelper, StringResources)"]
+    UI --> Theme["Theme Manager<br/>(App.xaml.cs, Theme Files)"]
+    UI --> Notify["Toast Notifications & Dialogs"]
     
     %% Specific Functionality Modules (handled within CSL)
-    CSL --> Reporter
-    CSL --> InvMgr
-    CSL --> UserProfile
-    CSL --> TaskMgr
-    CSL --> FeedbackMgr
+    CSL --> Reporter["Report Generation Logic<br/>(QuestPDF, EPPlus)"]
+    CSL --> InvMgr["Inventory Management Logic<br/>(Quantity Updates, Usage Logging)"]
+    CSL --> UserProfile["User Profile & Settings Management"]
+    CSL --> TaskMgr["Task Management Logic<br/>(Admin Dashboard)"]
+    CSL --> FeedbackMgr["Feedback & Issue Logic<br/>(Optional Google Sheets Sync)"]
     
     %% External Dependencies / Outputs
-    Reporter --> PDF[/PDF/]
-    Reporter --> Excel[/Excel/]
-    Reporter --> CSV[/CSV/]
-    FeedbackMgr ----> GSheets{{GSheets}}
+    Reporter --> PDF[/PDF Reports/]
+    Reporter --> Excel[/Excel Reports/]
+    Reporter --> CSV[/CSV Reports/]
+    FeedbackMgr ----> GSheets{{Google Sheets API}}
 
-    %% Styling for readability (using node IDs)
+    %% Styling for readability (using node IDs assigned during declaration)
     style UI fill:#85C1E9,stroke:#3498DB,color:#000
     style CSL fill:#AED6F1,stroke:#5DADE2,color:#000
     style DAL fill:#D6EAF8,stroke:#85C1E9,color:#000
