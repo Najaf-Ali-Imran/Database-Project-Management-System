@@ -102,25 +102,52 @@ This is a sophisticated, desktop-based Laboratory Information Management System 
 ## 🏗️ **System Architecture**
 
 ```mermaid
-graph TB
-    A[WPF Frontend] --> B[Business Logic Layer]
-    B --> C[Data Access Layer]
-    C --> D[MySQL Database]
+graph TD
+    %% Core UI and Application Services
+    UserInterface[WPF UI Layer (XAML Pages & Windows)] --> CSharpLogic["C# Code-Behind & Services\n(Business Logic, Data Validation, UI Event Handling)"]
+    CSharpLogic --> DataAccess["Data Access Logic (MySql.Data)"]
+    DataAccess --> MySQL_DB[(MySQL Database)]
+
+    %% Cross-Cutting Concerns / Shared Services
+    UserInterface --> AuthNAuthZ["Authentication & Authorization\n(LoginWindow, Role Checks)"]
+    UserInterface --> Localization["Localization Engine\n(LanguageHelper, StringResources)"]
+    UserInterface --> Theming["Theme Manager\n(App.xaml.cs, Theme Files)"]
+    UserInterface --> ToastNotif["Toast Notifications & Dialogs"]
     
-    A --> E[Authentication Module]
-    A --> F[Localization Engine]
-    A --> G[Theme Manager]
+    %% Specific Functionality Modules (handled within CSharpLogic)
+    CSharpLogic --> ReportGeneration["Report Generation Logic\n(QuestPDF, EPPlus)"]
+    CSharpLogic --> InventoryMgmt["Inventory Management Logic\n(Quantity Updates, Usage Logging)"]
+    CSharpLogic --> UserProfileMgmt["User Profile & Settings Management"]
+    CSharpLogic --> TaskMgmt["Task Management Logic (Admin Dashboard)"]
+    CSharpLogic --> FeedbackIssueMgmt["Feedback & Issue Logic\n(Optional Google Sheets Sync)"]
     
-    B --> H[Report Generator]
-    B --> I[Email Service]
-    B --> J[Inventory Manager]
+    %% External Dependencies / Outputs
+    ReportGeneration --> PDFOutput[/PDF Reports/]
+    ReportGeneration --> ExcelOutput[/Excel Reports/]
+    ReportGeneration --> CSVOutput[/CSV Reports/]
+    FeedbackIssueMgmt ----> OptionalGoogleSheetsAPI{{Google Sheets API}}
+
+    %% Styling for readability
+    style UserInterface fill:#85C1E9,stroke:#3498DB,color:#000
+    style CSharpLogic fill:#AED6F1,stroke:#5DADE2,color:#000
+    style DataAccess fill:#D6EAF8,stroke:#85C1E9,color:#000
+    style MySQL_DB fill:#F1948A,stroke:#E74C3C,color:#fff
+
+    style AuthNAuthZ fill:#F9E79F,stroke:#F39C12,color:#000
+    style Localization fill:#F9E79F,stroke:#F39C12,color:#000
+    style Theming fill:#F9E79F,stroke:#F39C12,color:#000
+    style ToastNotif fill:#F9E79F,stroke:#F39C12,color:#000
+
+    style ReportGeneration fill:#A9DFBF,stroke:#58D68D,color:#000
+    style InventoryMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
+    style UserProfileMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
+    style TaskMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
+    style FeedbackIssueMgmt fill:#A9DFBF,stroke:#58D68D,color:#000
     
-    H --> K[PDF Templates]
-    I --> L[Gmail SMTP]
-    
-    style A fill:#3498db,stroke:#2980b9,color:#fff
-    style D fill:#e74c3c,stroke:#c0392b,color:#fff
-    style H fill:#2ecc71,stroke:#27ae60,color:#fff
+    style PDFOutput fill:#D2B4DE,stroke:#8E44AD,color:#000
+    style ExcelOutput fill:#D2B4DE,stroke:#8E44AD,color:#000
+    style CSVOutput fill:#D2B4DE,stroke:#8E44AD,color:#000
+    style OptionalGoogleSheetsAPI fill:#FAD7A0,stroke:#F39C12,color:#000,stroke-dasharray: 5 5
 ```
 
 ---
@@ -393,7 +420,7 @@ graph TB
 ---
 
 
-**Built with ❤️ for the Al-Qaim Foundation**
+**Built with ❤️ for the Al-Qaim Foundat**
 
 *Empowering healthcare through intelligent laboratory management*
 
