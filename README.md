@@ -6,28 +6,40 @@
 ![.NET](https://img.shields.io/badge/.NET-WPF-512BD4?style=for-the-badge&logo=dotnet)
 ![Database](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Language Support](https://img.shields.io/badge/Languages-English%20%7C%20Urdu-FF6B6B?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
 
 *A comprehensive, enterprise-grade Laboratory Information Management System designed specifically for the Al-Qaim Foundation's healthcare operations.*
 
 ---
 
 ### 🖼️ **System Screenshots**
-<!-- Slideshow placeholder for project images -->
-![LIMS Dashboard](https://via.placeholder.com/800x450/2C3E50/ECF0F1?text=Admin+Dashboard+Overview)
+<!-- Replace these placeholder paths with your actual screenshot file paths -->
+
+![Admin Dashboard](./assets/Adash.png)
 *Administrator Dashboard - Real-time metrics and operational insights*
 
-![Sample Collection Interface](https://via.placeholder.com/800x450/34495E/ECF0F1?text=Sample+Collection+Interface)
-*Lab Technician Sample Collection Module*
+![Dark Theme Interface](./assets/black.png)
+*Dark Burgundy Theme - Modern night-shift friendly interface*
 
-![Test Results Entry](https://via.placeholder.com/800x450/27AE60/FFFFFF?text=Test+Results+Entry+System)
-*Advanced Test Results Recording with Progressive Entry*
+![Secure Login Page](./assets/Login.png)
+*Secure Authentication Portal with Role-based Access*
 
-![Report Generation](https://via.placeholder.com/800x450/8E44AD/FFFFFF?text=Professional+Report+Generation)
-*Automated PDF Report Generation with Templates*
+![Urdu Language Interface](./assets/urdu.png)
+*Urdu Language Support - Seamless bilingual functionality*
 
-![Inventory Management](https://via.placeholder.com/800x450/E67E22/FFFFFF?text=Inventory+Management+System)
-*Comprehensive Inventory Tracking and Usage Analytics*
+![Inventory Management](./assets/Inventory.png)
+*Comprehensive Inventory Management with Real-time Tracking*
+
+![Inventory Usage Analytics](./assets/usage.png)
+*Advanced Usage Analytics with Cost Tracking and Reports*
+
+![Feedback Management](./assets/Feedback.png)
+*Integrated Feedback and Issue Management System*
+
+![Lab Technician Dashboard](./assets/ldash.png)
+*Lab Technician Portal - Streamlined workflow management*
+
+![PDF Report Sample](./assets/reportgen.png)
+*Professional PDF Report Generation - Automated and Template-based*
 
 </div>
 
@@ -44,10 +56,7 @@
 - [🔒 Security & Compliance](#-security--compliance)
 - [🌐 Internationalization](#-internationalization)
 - [📈 Reporting & Analytics](#-reporting--analytics)
-- [⚙️ Installation & Setup](#️-installation--setup)
-- [📚 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
-- [📞 Support](#-support)
+
 
 ---
 
@@ -314,7 +323,6 @@ graph TB
   - Secure login with BCrypt password hashing
   - Role-based access control (RBAC)
   - Session management and timeouts
-  - Failed login attempt protection
 
 - **Data Protection**
   - Encrypted password storage
@@ -384,14 +392,6 @@ graph TB
 
 ---
 
-### 🌟 **Project Status & Metrics**
-
-![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-50K%2B-blue?style=flat-square)
-![Test Coverage](https://img.shields.io/badge/Test%20Coverage-85%25-green?style=flat-square)
-![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen?style=flat-square)
-![Performance](https://img.shields.io/badge/Performance-Optimized-orange?style=flat-square)
-
----
 
 **Built with ❤️ for the Al-Qaim Foundation**
 
@@ -403,8 +403,6 @@ graph TB
 ---
 
 <div align="center">
-
-*Last Updated: [Current Date]*
 
 **⭐ Star this repository if you find it useful!**
 
